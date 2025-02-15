@@ -24,7 +24,7 @@ https://github.com/dumprahul/AgentMurph
 ## 2. Create an .env file
 ```bash
 OPENAI_API_KEY=
-PRIVATE_KEY
+PRIVATE_KEY=
 ```
 Paste your respective openai api key and your private key. Note that private key must start from 0x. (else start with 0x and paste the private key over)
 
