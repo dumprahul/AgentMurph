@@ -1,5 +1,9 @@
-async function main(){
-    console.log("Hello this is agent Murph<3")
-};
+import 'dotenv/config';
+import OpenAI from "openai";
 
-main();
+async function main(){
+
+    const client = new OpenAI();
+    const assistant = await createAssistant(client);
+
+}
