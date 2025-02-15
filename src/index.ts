@@ -8,7 +8,7 @@ import { performRun } from './openai/performRun.js';
 async function main(){
 
     const client = new OpenAI();
-    const message = "Hello Agent Murph! Can you send 0.1MNT to 0x5E2be9Eaaf551f1862585A7D1FFaE2B3D7fE212D?"
+    const message = "Hello Agent Murph! Get the receipt of a transaction to check its status and details - 0x20052bf91a5bce65d0ae42a7393a365d76090dfb39084a3fac17cf9d3ab64d8d"
     const assistant = await createAssistant(client);
     const thread = await createThread(client,message);
 
