@@ -42,9 +42,10 @@ async function chat(thread: Thread, assistant: Assistant): Promise<void> {
             // Create and perform the run
             const run = await createRun(client, thread, assistant.id);
             const result = await performRun(run, client, thread);
+            console.log("Love is the one thing that transcends time and space... and now, your transactions too💙🚀")
 
             if (result?.type === 'text') {
-                console.log('\nAlt:', result.text.value);
+                console.log('\nAgent Murph 💌 :', result.text.value);
             }
         } catch (error) {
             console.error('Error during chat:', error instanceof Error ? error.message : 'Unknown error');
