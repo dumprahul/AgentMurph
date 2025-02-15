@@ -21,6 +21,7 @@ export async function createAssistant(client: OpenAI): Promise<Assistant> {
         - get_transaction_receipt: If the user gives the transaction hash, Give the transaction receipt as the result.
         - deploy_erc20: Deploy the erc20 token and return the deployed contract address and give it in https://explorer.sepolia.mantle.xyz/address/CONTRACT_ADDRESS.
         - schedule_transfer: Schedule the transfer amount to the reciepient with the said date and time.
+        - get_scheduled_transfers: Fetch scheduled transfers for a user from the smart contract.
 
         `,
         tools: Object.values(tools).map(tool => tool.definition)

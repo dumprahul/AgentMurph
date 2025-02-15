@@ -31,8 +31,46 @@ export const getScheduledTransfersTool: ToolConfig<GetScheduledTransfersArgs> = 
 };
 
 export async function getScheduledTransfers(user: Address) {
-    const contractAddress: Address = "0x"; // Fill this in later
-    const abi: any[] = []; // Fill this in later
+    const contractAddress: Address = "0x1E7cFB253301345A8eC4E48ecD538A3405e66c89"; // Fill this in later
+    const abi: any[] = [
+        {
+          "constant": true,
+          "inputs": [
+            {
+              "name": "_user",
+              "type": "address"
+            }
+          ],
+          "name": "getScheduledTransfers",
+          "outputs": [
+            {
+              "components": [
+                {
+                  "name": "recipient",
+                  "type": "address"
+                },
+                {
+                  "name": "amount",
+                  "type": "uint256"
+                },
+                {
+                  "name": "unlockTime",
+                  "type": "uint256"
+                },
+                {
+                  "name": "executed",
+                  "type": "bool"
+                }
+              ],
+              "name": "",
+              "type": "tuple[]"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        }
+      ]
+; 
     
     const publicClient = createViemPublicClient();
     const result = await publicClient.readContract({
