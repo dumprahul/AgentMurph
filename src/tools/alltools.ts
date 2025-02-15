@@ -2,6 +2,7 @@ import { getBalanceTool } from './getBalance.js';
 import { getWalletAddressTool } from './getWalletAddress.js';
 import { sendTransactionTool } from './sendTransaction.js';
 import { getTransactionReceiptTool } from './getTransactionReceipt.js';
+import { deployErc20Tool } from './deployErc20.js';
 
 
 export interface ToolConfig<T = any> {
@@ -25,4 +26,5 @@ export const tools: Record<string, ToolConfig> = {
     get_wallet_address: getWalletAddressTool,
     send_transaction: sendTransactionTool,
     get_transaction_receipt: getTransactionReceiptTool,
+    deploy_erc20: deployErc20Tool,
 };
