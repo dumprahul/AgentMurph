@@ -4,6 +4,7 @@ import { sendTransactionTool } from './sendTransaction.js';
 import { getTransactionReceiptTool } from './getTransactionReceipt.js';
 import { deployErc20Tool } from './deployErc20.js';
 import { scheduleTransferTool } from './scheduleTransfer.js';
+import { viewTransfersTool } from './viewScheduledTransfers.js';
 
 
 export interface ToolConfig<T = any> {
@@ -28,5 +29,6 @@ export const tools: Record<string, ToolConfig> = {
     send_transaction: sendTransactionTool,
     get_transaction_receipt: getTransactionReceiptTool,
     deploy_erc20: deployErc20Tool,
-    schedule_transfer:scheduleTransferTool
+    schedule_transfer:scheduleTransferTool,
+    view_scheduled_transfers:viewTransfersTool
 };
