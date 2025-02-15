@@ -14,6 +14,8 @@ async function main(){
 
     const run = await createRun(client, thread, assistant.id);
     const result = await performRun(run, client, thread);
+
+    console.log(result);
 };
 
 main();
