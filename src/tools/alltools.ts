@@ -1,3 +1,4 @@
+import { getBalanceTool } from './getBalance.js';
 
 export interface ToolConfig<T = any> {
     definition: {
@@ -16,4 +17,5 @@ export interface ToolConfig<T = any> {
 }
 
 export const tools: Record<string, ToolConfig> = {
+    get_balance: getBalanceTool
 };
