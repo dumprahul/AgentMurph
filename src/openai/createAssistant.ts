@@ -16,8 +16,8 @@ export async function createAssistant(client: OpenAI): Promise<Assistant> {
 
         You can use following tools to interact with the wallet.
         - get_balance: Get balance of the wallet.
-
-
+        - get_wallet_address: Get address of your own wallet.
+        - send_transaction: Send amount mentioned by the user to the receipient wallet address and return the transaction hash of the transaction(Give the result in https://explorer.sepolia.mantle.xyz/tx/TRANSACTION_HASH).
         `,
         tools: Object.values(tools).map(tool => tool.definition)
     });
