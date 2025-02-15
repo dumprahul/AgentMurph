@@ -42,7 +42,7 @@ async function chat(thread: Thread, assistant: Assistant): Promise<void> {
             // Create and perform the run
             const run = await createRun(client, thread, assistant.id);
             const result = await performRun(run, client, thread);
-            console.log("Love is the one thing that transcends time and space... and now, your transactions too💙🚀")
+            
 
             if (result?.type === 'text') {
                 console.log('\nAgent Murph 💌 :', result.text.value);
@@ -60,6 +60,7 @@ async function main(): Promise<void> {
         const assistant = await createAssistant(client);
         const thread = await createThread(client);
 
+        console.log("Love is the one thing that transcends time and space... and now, your transactions too💙🚀")
         console.log('Chat started! Type "exit" to end the conversation.');
         await chat(thread, assistant);
     } catch (error) {
